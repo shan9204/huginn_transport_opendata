@@ -1,7 +1,7 @@
 require 'huginn_agent'
 
 begin
-  require 'transport-opendata'
+  require 'transprt'
 rescue LoadError
 end
 
