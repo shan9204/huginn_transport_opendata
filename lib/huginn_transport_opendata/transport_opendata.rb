@@ -7,7 +7,7 @@ module Agents
     @client = Transprt::Client.new
 
     description <<-MD
-      Add a Agent description here #{client.location query: 'Geneva'}
+      Add a Agent description here #{@client.location query: 'Geneva'}
     MD
 
     def default_options
