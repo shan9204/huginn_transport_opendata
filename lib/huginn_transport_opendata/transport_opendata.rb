@@ -4,7 +4,7 @@ module Agents
 
     gem_dependency_check {defined?(Transprt::Client)}
 
-    client = Transprt::Client.new
+    @client = Transprt::Client.new
 
     description <<-MD
       Add a Agent description here #{client.location query: 'Geneva'}
