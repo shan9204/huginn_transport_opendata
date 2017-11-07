@@ -2,6 +2,8 @@ module Agents
   class TransportOpendata < Agent
     default_schedule '12h'
 
+    gem_dependency_check {defined?(Transport::Timetable)}
+
     description <<-MD
       Add a Agent description here #{Transport::Timetable.new.search_connection 'Zürich', 'Basel'}
     MD
