@@ -3,7 +3,7 @@ module Agents
     default_schedule '12h'
 
     description <<-MD
-      Add a Agent description here
+      Add a Agent description here #{Transport::Timetable.new.search_connection 'Zürich', 'Basel'}
     MD
 
     def default_options
