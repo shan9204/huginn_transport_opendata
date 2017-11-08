@@ -2,7 +2,6 @@ module Agents
   class TransportOpendata < Agent
     include FormConfigurable
 
-    cannot_be_scheduled!
     cannot_receive_events!
     can_dry_run!
 
