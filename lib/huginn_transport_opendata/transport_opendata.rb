@@ -33,7 +33,7 @@ module Agents
     def check
       log "sending request item: #{item}"
       transprt = Transprt::Client.new
-      result = transprt.connections from: item["from"], to: item["to"]
+      result = transprt.connections from: options["from"], to: options["to"]
       create_event(result)
     end
   end
