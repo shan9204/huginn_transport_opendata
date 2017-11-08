@@ -3,7 +3,7 @@ module Agents
     default_schedule '12h'
 
     description <<-MD
-      Add a Agent description here #{Transport::Client.new.location query: 'Geneva'}
+      Add a Agent description here
     MD
 
     def default_options
@@ -12,6 +12,7 @@ module Agents
     end
 
     def validate_options
+      log "From transport #{Transprt::Client.new.locations query: 'Geneva'}"
     end
 
     def working?
