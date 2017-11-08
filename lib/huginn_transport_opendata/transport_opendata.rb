@@ -36,7 +36,9 @@ module Agents
 
       log "received result: #{result}"
 
-      create_event payload: result
+      result.each do |item|
+        create_event payload: item
+      end
     end
   end
 end
