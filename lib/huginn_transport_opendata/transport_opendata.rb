@@ -12,11 +12,11 @@ module Agents
 
     def default_options
       {
-          "from" => "{{ from }}",
-          "to" => "{{ to }}",
-          "date" => "{{ date }}",
-          "time" => "{{ time }}",
-          "isArrivalTime" => "0"
+          "from" => "",
+          "to" => "",
+          "date" => "",
+          "time" => "",
+          "isArrivalTime" => 0
       }
     end
 
@@ -49,7 +49,8 @@ module Agents
 
             log "sending request item: #{item}"
             transprt = Transprt::Client.new
-            transprt.connections from: item["from"], to: item["to"]
+            result = transprt.connections from: item["from"], to: item["to"]
+            create_event :payload => result
           end
       end
     end
