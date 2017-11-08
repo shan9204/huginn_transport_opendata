@@ -3,6 +3,7 @@ module Agents
     include FormConfigurable
 
     cannot_be_scheduled!
+    cannot_receive_events!
     can_dry_run!
 
     gem_dependency_check { defined?(Transprt::Client)}
