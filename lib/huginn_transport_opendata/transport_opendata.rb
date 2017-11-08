@@ -31,27 +31,18 @@ module Agents
     end
 
     def check
-      item["from"] = interpolated["from"] if interpolated["from"].present?
-      item["to"] = interpolated["to"] if interpolated["to"].present?
-
       log "sending request item: #{item}"
       transprt = Transprt::Client.new
       result = transprt.connections from: item["from"], to: item["to"]
-      create_event(result)
+      #create_event(result)
     end
 
-    # def receive(incoming_events)
-    #   incoming_events.each do |event|
-    #       interpolate_with(event) do
-    #         item["from"] = interpolated["from"] if interpolated["from"].present?
-    #         item["to"] = interpolated["to"] if interpolated["to"].present?
-    #
-    #         log "sending request item: #{item}"
-    #         transprt = Transprt::Client.new
-    #         result = transprt.connections from: item["from"], to: item["to"]
-    #         create_event(result)
-    #       end
-    #   end
-    # end
+    def receive(incoming_events)
+      incoming_events.each do |event|
+          interpolate_with(event) do
+            create_event(event)
+          end
+      end
+    end
   end
 end
