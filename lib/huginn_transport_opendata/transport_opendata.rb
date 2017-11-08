@@ -1,5 +1,6 @@
 module Agents
   class TransportOpendata < Agent
+    include FormConfigurable
 
     cannot_be_scheduled!
 
