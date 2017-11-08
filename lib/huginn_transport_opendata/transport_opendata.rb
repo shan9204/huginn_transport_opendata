@@ -34,6 +34,9 @@ module Agents
       log "sending request item: #{options}"
       transprt = Transprt::Client.new
       result = transprt.connections from: options["from"], to: options["to"]
+
+      log "received result: #{result}"
+
       create_event payload: result
     end
   end
