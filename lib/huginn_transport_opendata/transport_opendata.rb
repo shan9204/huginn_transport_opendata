@@ -13,7 +13,8 @@ module Agents
 
     def default_options
       {
-
+        'from' => 'Basel',
+        'to' => 'Bern'
       }
     end
 
@@ -21,6 +22,7 @@ module Agents
     form_configurable :to
 
     def validate_options
+      errors.add(:base, 'from is required') unless options['from'].present?
     end
 
     def working?
@@ -37,6 +39,7 @@ module Agents
       log "received result: #{result}"
 
       result.each do |item|
+        log "received item #{item}"
         create_event payload: item
       end
     end
