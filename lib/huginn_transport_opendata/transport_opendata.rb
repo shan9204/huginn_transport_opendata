@@ -38,7 +38,7 @@ module Agents
 
       log "received result: #{result}"
 
-      create_event payload: JSON.parse("[#{result.join(",")}]")
+      create_event payload: JSON.parse("[#{result.join(',')}]")
     end
   end
 end
