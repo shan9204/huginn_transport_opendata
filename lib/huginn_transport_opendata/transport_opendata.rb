@@ -34,14 +34,11 @@ module Agents
     def check
       log "sending request item: #{options}"
       transprt = Transprt::Client.new
-      result = transprt.connections from: options["from"], to: options["to"], limit: "1"
+      result = transprt.connections from: options["from"], to: options["to"]
 
       log "received result: #{result}"
 
-      result.each do |item|
-        log "received item #{item}"
-        create_event payload: item
-      end
+      create_event payload: JSON.parse(result)
     end
   end
 end

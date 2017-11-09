@@ -1,4 +1,5 @@
 require 'huginn_agent'
+require 'json'
 
 begin
   require 'transprt'
