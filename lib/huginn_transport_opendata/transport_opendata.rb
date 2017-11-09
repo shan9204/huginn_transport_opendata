@@ -34,7 +34,7 @@ module Agents
     def check
       log "sending request item: #{options}"
       transprt = Transprt::Client.new
-      result = transprt.connections from: options["from"], to: options["to"]
+      result = transprt.connections from: options["from"], to: options["to"] limit: 1
 
       log "received result: #{result}"
 
