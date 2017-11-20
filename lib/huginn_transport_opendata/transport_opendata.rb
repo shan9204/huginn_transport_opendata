@@ -40,6 +40,7 @@ module Agents
 
       result.each do |item|
         create_event payload: item
+      end
     end
   end
 end
