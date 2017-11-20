@@ -8,13 +8,14 @@ module Agents
     gem_dependency_check {defined?(Transprt::Client)}
 
     description <<-MD
-      Add a Agent description here
+      Connects to the transport.opendata.ch API and checks currently available connections between two defined cities for 
+      the timestamp the request is sent.
     MD
 
     def default_options
       {
-        'from' => 'Basel',
-        'to' => 'Bern'
+          'from' => 'Essen',
+          'to' => 'Duisburg'
       }
     end
 
