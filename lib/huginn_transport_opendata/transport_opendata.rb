@@ -8,8 +8,7 @@ module Agents
     gem_dependency_check {defined?(Transprt::Client)}
 
     description <<-MD
-      Connects to the transport.opendata.ch API and checks currently available connections between two defined cities for 
-      the timestamp the request is sent.
+      Connects to the transport.opendata.ch API and checks currently available connections between two defined cities for the timestamp the request is sent.
     MD
 
     def default_options
