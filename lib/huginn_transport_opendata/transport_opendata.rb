@@ -38,7 +38,8 @@ module Agents
 
       log "received result: #{result}"
 
-      create_event payload: JSON.parse("[#{result}]")
+      result.each do |item|
+        create_event payload: item
     end
   end
 end
