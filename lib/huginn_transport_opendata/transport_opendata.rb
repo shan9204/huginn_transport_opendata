@@ -38,10 +38,7 @@ module Agents
 
       log "received result: #{result}"
 
-      splitString = result.join(',')
-      log "split string: #{splitString}"
-
-      create_event payload: JSON.parse("[#{splitString}]")
+      create_event payload: JSON.parse("[#{result}]")
     end
   end
 end
