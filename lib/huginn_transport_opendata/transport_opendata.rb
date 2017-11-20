@@ -13,8 +13,8 @@ module Agents
 
     def default_options
       {
-          'from' => 'Essen',
-          'to' => 'Duisburg'
+          'from' => 'Basel',
+          'to' => 'Bern'
       }
     end
 
