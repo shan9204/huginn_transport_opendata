@@ -1,8 +1,6 @@
 # TransportOpendata
 
-Welcome to your new agent gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/huginn_transport_opendata`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the Swiss public transport API agent gem! This agent uses the [Transprt]{https://github.com/ghn/transprt} client to access the Swiss public transport API.
 
 ## Installation
 
@@ -19,10 +17,6 @@ ADDITIONAL_GEMS=huginn_transport_opendata
 And then execute:
 
     $ bundle
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 

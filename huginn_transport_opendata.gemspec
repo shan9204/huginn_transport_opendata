@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Shanmathuran Sritharan"]
   spec.email         = ["shanmathuran.sritharan@stud.uni-due.de"]
 
-  spec.summary       = "Huginn agent to connects to transport.opendata.ch API."
+  spec.summary       = "Huginn agent to connects to Swiss public transport API transport.opendata.ch ."
 
   spec.homepage      = "https://github.com/shan9204/huginn_transport_opendata"
 
